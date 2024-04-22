@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
 
-Route::get('/', function() {
-    
-    // do something before
-
-    return view("home");
-});
+Route::get('/', [FrontController::class, 'home']);
+Route::get('/contact', [FrontController::class, 'contact']);
 
 Route::view('/about', 'about');
