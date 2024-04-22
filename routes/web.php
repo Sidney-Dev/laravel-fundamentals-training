@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    
+    // do something before
+
+    return view("home");
 });
+
+Route::view('/about', 'about');
